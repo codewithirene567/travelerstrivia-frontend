@@ -1,6 +1,6 @@
 class Country{
     constructor(name) {
-        this._name = name;
+        this.name = name;
       }
      
       get name() {
