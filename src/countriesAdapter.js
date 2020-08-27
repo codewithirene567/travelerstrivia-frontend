@@ -16,7 +16,12 @@ class CountriesAdapter{
 }
 
 function renderCountries(countries){
-
+const placeForQuestions = document.querySelector('h2')
+countries.forEach(country => {
+    const h3 = document.createElement('h3')
+    h3.innerHTML = country.name
+    placeForQuestions.appendChild('h3')
+})
 }
 
 document.addEventListener('DOMContentLoaded', function() {
