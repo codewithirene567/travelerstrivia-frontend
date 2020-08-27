@@ -1,6 +1,7 @@
  class Question{
      static arrayOfQuestions = []
-     constructor(text, right, answer1, answer2, answer3, country_id){
+     constructor(id, text, right, answer1, answer2, answer3, country_id){
+        this.id = id
         this.text = text
         this.right = right
         this.answer1 = answer1
@@ -12,7 +13,7 @@
      }
      addQuestiontoDOM(){
          const textOfQuestion = document.createElement('h5')
-         textOfQuestion.textContent = this.right
+         textOfQuestion.textContent = this.text
          console.log(this)
          const answerButton1 = document.createElement('button')
          answerButton1.textContent = this.answer1
@@ -35,15 +36,14 @@
 whenTheyClickAnAnswer= (e) =>{
     console.log(this.answer1)
     console.log(e.target.innerText)
-    //console.log(answerButton1)
+    
     if (e.target.innerText === this.answer1){
         alert("You got it right!")
-        //document.querySelector('button').style.backgroundColor = 'Green'
-       e.target.style.backgroundColor = 'Green'
+        e.target.style.backgroundColor = 'Green'
     }else{
         alert("You got it wrong!")
         e.target.style.backgroundColor = 'Red'
     }
-    
+   
 }
  }

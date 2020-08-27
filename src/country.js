@@ -9,18 +9,19 @@ class Country{
      addCountrytoDOM(){
         const button = document.createElement('button')
         button.textContent = this.name
-        const placeForCountries = document.querySelector('main')
-        placeForCountries.appendChild(button)
+        let stuff = document.querySelector('#stuff')
+        stuff.appendChild(button)
         button.addEventListener('click', this.whenTheyClickACountry)
      }
 
      whenTheyClickACountry = (e) => {
-        const newForm = document.getElementById('new-form-container')
-        newForm.hidden = false
-        //const intro = document.getElementById('intro')
-        //intro.hidden = true
-       // const newFormBtn = document.getElementById('button')
-        //newFormBtn.hidden = true
+        const questionAdapter = new QuestionsAdapter()
+        //document.addEventListener('click', function() {
+          questionAdapter.fetchQuestions()
+        let stuff = document.querySelector('#stuff')
+          stuff.setAttribute("hidden", true)
+        
+        
         }
 
         

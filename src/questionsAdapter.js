@@ -14,10 +14,11 @@ function renderQuestions(questions){
    
     
     questions.forEach(questionObject => {
-       // console.log(questionObject)
+        console.log(questionObject)
         let question = new Question(questionObject.id, questionObject.text,
             questionObject.right, questionObject.answer1, questionObject.answer2,
             questionObject.answer3, questionObject.country_id)
+            //debugger
         question.addQuestiontoDOM()
         
         })
