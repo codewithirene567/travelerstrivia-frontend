@@ -17,7 +17,9 @@ class Country{
      whenTheyClickACountry = (e) => {
         const newForm = document.getElementById('new-form-container')
         newForm.hidden = false
-        //const newFormBtn = document.getElementById('button')
+        //const intro = document.getElementById('intro')
+        //intro.hidden = true
+       // const newFormBtn = document.getElementById('button')
         //newFormBtn.hidden = true
         }
 
