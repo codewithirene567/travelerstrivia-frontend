@@ -12,18 +12,17 @@ class CountriesAdapter{
 }
 
 function renderCountries(countries){
-    const placeForQuestions = document.querySelector('main')
+   
     
-    countries.forEach(country => {
-        // const h3 = document.createElement('h3')
-        // h3.innerHTML = country.name
-        // placeForQuestions.appendChild(h3)
-        const button = document.createElement('button')
-        button.innerHTML = country.name
-        placeForQuestions.appendChild(button)
-})
+    countries.forEach(countryObject => {
+        let country = new Country(countryObject.name, countryObject.id)
+        country.addCountrytoDOM()
+        
+        })
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    countryAdapter.fetchCountries()
-  })
+
+
+  
+
+  
