@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', ()=> alert("hi"))
+//document.addEventListener('DOMContentLoaded', ()=> alert("hi"))
 
 
 const countryAdapter = new CountriesAdapter()
