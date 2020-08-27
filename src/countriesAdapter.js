@@ -15,9 +15,12 @@ function renderCountries(countries){
     const placeForQuestions = document.querySelector('main')
     
     countries.forEach(country => {
-        const h3 = document.createElement('h3')
-        h3.innerHTML = country.name
-        placeForQuestions.appendChild(h3)
+        // const h3 = document.createElement('h3')
+        // h3.innerHTML = country.name
+        // placeForQuestions.appendChild(h3)
+        const button = document.createElement('button')
+        button.innerHTML = country.name
+        placeForQuestions.appendChild(button)
 })
 }
 
