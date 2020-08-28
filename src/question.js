@@ -56,7 +56,6 @@ class Question{
             document.getElementById('Q' + this.id + "B1").disabled = true
             document.getElementById('Q' + this.id + "B2").disabled = true
             document.getElementById('Q' + this.id + 'B3').disabled = true
-            console.log(document.getElementById('Q' + this.id + 'B3'))
             
         }
 
@@ -64,22 +63,25 @@ class Question{
        
      }
 
-        // selectSubmitToEnd(){
-        //     let submitButton = document.getElementById('high-score-button')
-        //     submitButton.addEventListener('click', this.endGame)
-        // }
-        
         calculateScore(){
+          this.selectSubmitToEnd()
           let finalScore = document.getElementById('display-score')
           finalScore.textContent = `Congrats! Your score is ${score}`
-            return score
+           
         }
 
-        // endGame = (e) =>{
-        //     debugger
-        //     if (e.target.innerText === "Click here to submit your score to the high scores list"){
-        //         calculateScore()
-        //     }
-        // }
+          selectSubmitToEnd(){
+             let submitButton = document.getElementById('high-score-button')
+             submitButton.addEventListener('click', this.endGame)
+            }
+         
+
+         endGame = (e) =>{
+            if (e.target.innerText === "Click here to submit your score to the high scores list"){
+                let submitButton = document.getElementById('high-score-button')
+                submitButton.setAttribute("hidden", true)
+             }
+         }
+        
 
   }
