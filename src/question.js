@@ -1,4 +1,5 @@
 let score = 0
+let numberOfQuestionsAnswered = 0
 class Question{
     static arrayOfQuestions = []
     constructor(id, text, right, answer1, answer2, answer3, country_id){
@@ -49,6 +50,8 @@ class Question{
             if (green) {
                 let addOne = ++score
                 addOne
+                let QuestionAnswered = ++numberOfQuestionsAnswered
+                QuestionAnswered
             }
         }else{
             alert("You got it wrong!")
@@ -58,10 +61,20 @@ class Question{
             document.getElementById('Q' + this.id + 'B3').disabled = true
             
         }
-
+        this.checkIfAnsweredAll()
         this.calculateScore()
        
      }
+
+        checkIfAnsweredAll(){
+          if (numberOfQuestionsAnswered = 0){
+            let submitButton = document.getElementById('high-score-button')
+            submitButton.setAttribute("hidden", true)
+          }else if(numberOfQuestionsAnswered !== 3){
+            let submitButton = document.getElementById('high-score-button')
+            submitButton.setAttribute("hidden", true)
+          }
+        }
 
         calculateScore(){
           this.selectSubmitToEnd()
