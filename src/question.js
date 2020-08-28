@@ -1,3 +1,4 @@
+const score = 0
 class Question{
     static arrayOfQuestions = []
     constructor(id, text, right, answer1, answer2, answer3, country_id){
@@ -11,6 +12,8 @@ class Question{
        
        Question.arrayOfQuestions.push(this)
     }
+
+    
     addQuestiontoDOM(){
 
         const textOfQuestion = document.createElement('h5')
@@ -43,12 +46,10 @@ class Question{
             document.getElementById('Q' + this.id + "B1").disabled = true
             document.getElementById('Q' + this.id + "B2").disabled = true
             document.getElementById('Q' + this.id + 'B3').disabled = true
-            e.target.style.backgroundColor = 'Green'
-            //if (green) {
-                //let otherButtons =document.querySelectorAll('button')
-                //otherButtons.disabled = true
-                //e.target.disabled = true
-            //}
+            let green = e.target.style.backgroundColor = 'Green'
+            if (green) {
+                score++
+            }
         }else{
             console.log(e)
             alert("You got it wrong!")
