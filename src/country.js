@@ -21,7 +21,7 @@ class Country{
           stuff.setAttribute("hidden", true)
          // let hideTheHighScoreStuff = document.querySelector('#high-score-button')
     //hideTheHighScoreStuff.setAttribute("hidden", false)
-          questionAdapter.fetchQuestions()
+          questionAdapter.fetchQuestions(this.id)
           //appendThis(e.target.id.questions())
           
         //ask about this part

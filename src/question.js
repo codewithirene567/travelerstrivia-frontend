@@ -1,50 +1,75 @@
- class Question{
-     static arrayOfQuestions = []
-     constructor(id, text, right, answer1, answer2, answer3, country_id){
-        this.id = id
-        this.text = text
-        this.right = right
-        this.answer1 = answer1
-        this.answer2 = answer2
-        this.answer3 = answer3
-        this.country_id = country_id
-        
-        Question.arrayOfQuestions.push(this)
-     }
-     addQuestiontoDOM(){
-         const textOfQuestion = document.createElement('h5')
-         textOfQuestion.textContent = this.text
-         console.log(this)
-         const answerButton1 = document.createElement('button')
-         answerButton1.textContent = this.answer1
-         const answerButton2 = document.createElement('button')
-         answerButton2.textContent = this.answer2
-         const answerButton3 = document.createElement('button')
-         answerButton3.textContent = this.answer3
-         const placeForQuestions = document.querySelector('main')
-         placeForQuestions.appendChild(textOfQuestion)
-         placeForQuestions.appendChild(answerButton1)
-         placeForQuestions.appendChild(answerButton2)
-         placeForQuestions.appendChild(answerButton3)
-         answerButton1.addEventListener('click', this.whenTheyClickAnAnswer)
-         answerButton2.addEventListener('click', this.whenTheyClickAnAnswer)
-         answerButton3.addEventListener('click', this.whenTheyClickAnAnswer)
-         
-     }
- 
+class Question{
+    static arrayOfQuestions = []
+    constructor(id, text, right, answer1, answer2, answer3, country_id){
+       this.id = id
+       this.text = text
+       this.right = right
+       this.answer1 = answer1
+       this.answer2 = answer2
+       this.answer3 = answer3
+       this.country_id = country_id
+       
+       Question.arrayOfQuestions.push(this)
+    }
+    addQuestiontoDOM(){
 
-    whenTheyClickAnAnswer= (e) =>{
-        console.log(this.answer1)
-        console.log(e.target.innerText)
+        const textOfQuestion = document.createElement('h5')
+        textOfQuestion.textContent = this.text
+        console.log(this)
+        const answerButton1 = document.createElement('button')
+        answerButton1.id = 'Q' + this.id + 'B1'
+        answerButton1.textContent = this.answer1
+        const answerButton2 = document.createElement('button')
+        answerButton2.id = 'Q' + this.id + 'B2'
+        answerButton2.textContent = this.answer2
+        const answerButton3 = document.createElement('button')
+        answerButton3.id = 'Q' + this.id + "B3"
+        answerButton3.textContent = this.answer3
+        const placeForQuestions = document.querySelector('main')
+        placeForQuestions.appendChild(textOfQuestion)
+        placeForQuestions.appendChild(answerButton1)
+        placeForQuestions.appendChild(answerButton2)
+        placeForQuestions.appendChild(answerButton3)
+        answerButton1.addEventListener('click', this.whenTheyClickAnAnswer)
+        answerButton2.addEventListener('click', this.whenTheyClickAnAnswer)
+        answerButton3.addEventListener('click', this.whenTheyClickAnAnswer)
+        
+    }
+
+    whenTheyClickAnAnswer = (e) =>{
         
         if (e.target.innerText === this.right){
-            console.log(this.right)
             alert("You got it right!")
+            document.getElementById('Q' + this.id + "B1").disabled = true
+            document.getElementById('Q' + this.id + "B2").disabled = true
+            document.getElementById('Q' + this.id + 'B3').disabled = true
             e.target.style.backgroundColor = 'Green'
+            //if (green) {
+                //let otherButtons =document.querySelectorAll('button')
+                //otherButtons.disabled = true
+                //e.target.disabled = true
+            //}
         }else{
+            console.log(e)
             alert("You got it wrong!")
-            e.target.style.backgroundColor = 'Red'
+            let red = e.target.style.backgroundColor = 'Red'
+            document.getElementById('Q' + this.id + "B1").disabled = true
+            document.getElementById('Q' + this.id + "B2").disabled = true
+            document.getElementById('Q' + this.id + 'B3').disabled = true
+            console.log(document.getElementById('Q' + this.id + 'B3'))
+            //if (red){
+            //    e.target.disabled = true
+            //}
         }
-    
-    }
+        
+       
  }
+
+//  function checkingIfAnswered (e) {
+//     if (red){
+//         e.target.disabled = true
+//     } else if (green) {
+//         e.target.disabled = true
+//     }
+//   }
+  }
