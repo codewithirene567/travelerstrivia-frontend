@@ -10,7 +10,7 @@ class Highscore{
 
      addHighscoretoDOM(){
         //const highscoreButton = document.createElement('button')
-        //highscoreButton.textContent = "Click here to submit your score to the high scores list"
+      
         const newHighscoreButtonArea = document.getElementById('button')
         const newHighscoreButton = document.getElementById('high-score-button')
         newHighscoreButtonArea.appendChild(newHighscoreButton)

@@ -1,4 +1,4 @@
-const score = 0
+let score = 0
 class Question{
     static arrayOfQuestions = []
     constructor(id, text, right, answer1, answer2, answer3, country_id){
@@ -18,7 +18,6 @@ class Question{
 
         const textOfQuestion = document.createElement('h5')
         textOfQuestion.textContent = this.text
-        console.log(this)
         const answerButton1 = document.createElement('button')
         answerButton1.id = 'Q' + this.id + 'B1'
         answerButton1.textContent = this.answer1
@@ -48,29 +47,39 @@ class Question{
             document.getElementById('Q' + this.id + 'B3').disabled = true
             let green = e.target.style.backgroundColor = 'Green'
             if (green) {
-                score++
+                let addOne = ++score
+                addOne
             }
         }else{
-            console.log(e)
             alert("You got it wrong!")
-            let red = e.target.style.backgroundColor = 'Red'
+            e.target.style.backgroundColor = 'Red'
             document.getElementById('Q' + this.id + "B1").disabled = true
             document.getElementById('Q' + this.id + "B2").disabled = true
             document.getElementById('Q' + this.id + 'B3').disabled = true
             console.log(document.getElementById('Q' + this.id + 'B3'))
-            //if (red){
-            //    e.target.disabled = true
-            //}
+            
         }
-        
-       
- }
 
-//  function checkingIfAnswered (e) {
-//     if (red){
-//         e.target.disabled = true
-//     } else if (green) {
-//         e.target.disabled = true
-//     }
-//   }
+        this.calculateScore()
+       
+     }
+
+        // selectSubmitToEnd(){
+        //     let submitButton = document.getElementById('high-score-button')
+        //     submitButton.addEventListener('click', this.endGame)
+        // }
+        
+        calculateScore(){
+          let finalScore = document.getElementById('display-score')
+          finalScore.textContent = `Congrats! Your score is ${score}`
+            return score
+        }
+
+        // endGame = (e) =>{
+        //     debugger
+        //     if (e.target.innerText === "Click here to submit your score to the high scores list"){
+        //         calculateScore()
+        //     }
+        // }
+
   }
