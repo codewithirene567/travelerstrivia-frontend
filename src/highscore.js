@@ -1,4 +1,5 @@
 //recording high score - POST request
+const newHighscoreButton = document.getElementById('submit')
 class Highscore{
     static arrayOfHighscores =[]
     constructor(name, score, country_id) {
@@ -8,26 +9,49 @@ class Highscore{
          Highscore.arrayOfHighscores.push(this)
       }
 
-     addHighscoretoDOM(){
-        //const highscoreButton = document.createElement('button')
       
-        const newHighscoreButtonArea = document.getElementById('button')
-        const newHighscoreButton = document.getElementById('high-score-button')
-        newHighscoreButtonArea.appendChild(newHighscoreButton)
-       // highscoreButton.addEventListener('click', this.whenTheyClickAHighscoreButton)
 
-        newHighscoreButton.addEventListener('click', () => {
-         const highscoreAdapter = new HighscoresAdapter()
-         highscoreAdapter.fetchHighscores()
+      whenTheyClickAHighscoreButton = (e) => {
+         if (e.target.textContent == "submit"){
+            let questionsAnswers = document.querySelector('main')
+            questionsAnswers.setAttribute("hidden", true)
+
+            this.addHighscoretoDOM()
+
+            const backToStartButton = document.createElement('button')
+            backToStartButton.textContent = "Start over"
+            const areaForStartButton = document.getElementById('back-to-start')
+            areaForStartButton.appendChild(backToStartButton)
+            backToStartButton.addEventListener('click', this.backtoStart)
+         }
+      }
+
+      backtoStart = (e) => {
+         if (e.target.textContent == "Start over"){
+         //show everything that was there in the beginning
+         let stuff = document.querySelector('#stuff')
+          stuff.setAttribute("hidden", false)
+         }
+      }
+
+
+     addHighscoretoDOM(){
+        
+        const highscore = document.createElement('li')
+        const newHighscoreArea = document.getElementById('all-high-scores')
+        highscore.textContent == this.score
+        highscore.textContent == this.name
+        newHighscoreArea.appendChild(highscore)
+        
      }
-        )}
+   //     )}
 }
      
    //   highscoreButton.addEventListener('click', function(){
    //       highscoreAdapter.fetchHighscores()
    //   })
 
-   //   whenTheyClickAHighscoreButton = (e) => {
+      
       
    //      const highscoreAdapter = new HighscoresAdapter()
        

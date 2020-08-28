@@ -50,8 +50,6 @@ class Question{
             if (green) {
                 let addOne = ++score
                 addOne
-                let QuestionAnswered = ++numberOfQuestionsAnswered
-                QuestionAnswered
             }
         }else{
             alert("You got it wrong!")
@@ -61,20 +59,28 @@ class Question{
             document.getElementById('Q' + this.id + 'B3').disabled = true
             
         }
+
+        numberOfQuestionsAnswered ++
+
         this.checkIfAnsweredAll()
         this.calculateScore()
        
      }
 
-        checkIfAnsweredAll(){
-          if (numberOfQuestionsAnswered = 0){
-            let submitButton = document.getElementById('high-score-button')
-            submitButton.setAttribute("hidden", true)
-          }else if(numberOfQuestionsAnswered !== 3){
-            let submitButton = document.getElementById('high-score-button')
-            submitButton.setAttribute("hidden", true)
-          }
-        }
+         checkIfAnsweredAll(){
+             if(numberOfQuestionsAnswered === 3) {
+                 const submitButton = document.getElementById('high-score-button');
+                 submitButton.removeAttribute('hidden');
+             }
+         }
+
+        //  nowUnhideIt(){
+        //     if (numberOfQuestionsAnswered === 3){
+        //         let submitButton = document.getElementById('high-score-button')
+        //         //submitButton.setAttribute("hidden", false)
+        //         submitButton.hidden = false
+        //      }
+        //  }
 
         calculateScore(){
           this.selectSubmitToEnd()
