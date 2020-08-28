@@ -33,17 +33,18 @@
      }
  
 
-whenTheyClickAnAnswer= (e) =>{
-    console.log(this.answer1)
-    console.log(e.target.innerText)
+    whenTheyClickAnAnswer= (e) =>{
+        console.log(this.answer1)
+        console.log(e.target.innerText)
+        
+        if (e.target.innerText === this.right){
+            console.log(this.right)
+            alert("You got it right!")
+            e.target.style.backgroundColor = 'Green'
+        }else{
+            alert("You got it wrong!")
+            e.target.style.backgroundColor = 'Red'
+        }
     
-    if (e.target.innerText === this.answer1){
-        alert("You got it right!")
-        e.target.style.backgroundColor = 'Green'
-    }else{
-        alert("You got it wrong!")
-        e.target.style.backgroundColor = 'Red'
     }
-   
-}
  }

@@ -17,14 +17,21 @@ class Country{
      whenTheyClickACountry = (e) => {
         const questionAdapter = new QuestionsAdapter()
         //document.addEventListener('click', function() {
-          questionAdapter.fetchQuestions()
-        let stuff = document.querySelector('#stuff')
+            let stuff = document.querySelector('#stuff')
           stuff.setAttribute("hidden", true)
+         // let hideTheHighScoreStuff = document.querySelector('#high-score-button')
+    //hideTheHighScoreStuff.setAttribute("hidden", false)
+          questionAdapter.fetchQuestions()
+          //appendThis(e.target.id.questions())
+          
+        //ask about this part
         
         
         }
 
-        
+        questions() {
+            return Question.all.filter((question) => question.country_id == this.id)
+        }
 }
 
 

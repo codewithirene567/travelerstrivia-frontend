@@ -9,18 +9,34 @@ class Highscore{
       }
 
      addHighscoretoDOM(){
-        const highscoreForm = document.createElement('h1')
-        highscoreForm.textContent = formForFilling
-        const placeForHighscores = document.querySelector('main')
-        placeForHighscores.appendChild(button)
-        h1.addEventListener('click', this.whenTheyClickACountry)
+        //const highscoreButton = document.createElement('button')
+        //highscoreButton.textContent = "Click here to submit your score to the high scores list"
+        const newHighscoreButtonArea = document.getElementById('button')
+        const newHighscoreButton = document.getElementById('high-score-button')
+        newHighscoreButtonArea.appendChild(newHighscoreButton)
+       // highscoreButton.addEventListener('click', this.whenTheyClickAHighscoreButton)
+
+        newHighscoreButton.addEventListener('click', () => {
+         const highscoreAdapter = new HighscoresAdapter()
+         highscoreAdapter.fetchHighscores()
      }
-
-     whenTheyClickAHighscore = (e) => {
-        const newForm = document.getElementById('new-form-container')
-        newForm.hidden = false
-        
-        }
-
-        
+        )}
 }
+     
+   //   highscoreButton.addEventListener('click', function(){
+   //       highscoreAdapter.fetchHighscores()
+   //   })
+
+   //   whenTheyClickAHighscoreButton = (e) => {
+      
+   //      const highscoreAdapter = new HighscoresAdapter()
+       
+   //     highscoreAdapter.fetchHighscores()
+   //     console.log(fetchHighscores())
+   // }
+
+        
+// }
+
+        
+
