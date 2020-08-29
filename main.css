@@ -44,7 +44,7 @@ ul#all-high-scores{
     display: inline-block;
     font-size: 16px;
   } 
-  
+
   h5 ~ button:hover {
     background-color: #F8F8FF;
     color: black;
@@ -73,6 +73,21 @@ ul#all-high-scores{
   background-size: cover;
    }
 
+input#submit{
+    background-color: yellow;
+    border: 2px solid black;
+    color: black;
+    padding: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input#submit:hover {
+    background-color: white;
+    color: black;
+  }
 
 
 
