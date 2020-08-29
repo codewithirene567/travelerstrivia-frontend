@@ -5,12 +5,45 @@ div#stuff {
     color: yellow;
     text-shadow: 2px 2px 20px yellow;
     text-align: center;
-
+    font-size: 40px;
   }
  
   * {
       text-align: center;
   }
+
+  div#high-score-form-container{
+    color: #FFD700;
+    font-size: 30px;
+}
+
+ul#all-high-scores{
+    color: #FFD700;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+   h2 ~ button {
+    background-color: #FF6347;
+    border: 2px solid black;
+    color: black;
+    padding: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  } 
+
+  h5 ~ button {
+    background-color: yellow;
+    border: 2px solid black;
+    color: black;
+    padding: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  } 
 
 
 
