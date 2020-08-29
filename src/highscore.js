@@ -13,10 +13,17 @@ class Highscore{
         
         const highscore = document.createElement('li')
         const newHighscoreArea = document.getElementById('all-high-scores')
-        highscore.textContent += `Your score: ${this.score}`
+        
+        highscore.textContent += `Your score: ${this.score} -`
         highscore.textContent += ` Name: ${this.name} `
         const br = document.createElement("BR")
         //highscore.textContent += this.country_id 
+        if (this.country_id === 1){
+           highscore.textContent += "- Country: China"
+        }else if (this.country_id === 2){
+           highscore.textContent += "- Country: India"
+        }
+        //debugger
         highscore.setAttribute('data-id', this.country_id)
         //thisId.setAttribute("hidden", true)
         //find the country object, display country.name

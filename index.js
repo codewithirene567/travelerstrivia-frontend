@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
     
     () => specialForm.classList.toggle('d-none')
     document.getElementById('high-score-button').setAttribute('hidden', true)
-    
 })
 
 function whenTheyClickAHighscoreButton() {

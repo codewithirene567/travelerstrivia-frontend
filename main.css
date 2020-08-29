@@ -1,3 +1,19 @@
 .d-none {
     display: none;
 }
+div#stuff {
+    color: yellow;
+    text-shadow: 2px 2px 20px yellow;
+    text-align: center;
+
+  }
+ 
+  * {
+      text-align: center;
+  }
+
+
+
+
+
+ 

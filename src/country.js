@@ -10,7 +10,12 @@ class Country{
         const button = document.createElement('button')
         button.textContent = this.name
         let stuff = document.querySelector('#stuff')
+        let br = document.createElement("BR")
+        let newbr = document.createElement("BR")
         stuff.appendChild(button)
+        stuff.appendChild(br)
+        stuff.appendChild(newbr)
+        
         button.addEventListener('click', this.whenTheyClickACountry)
      }
 
