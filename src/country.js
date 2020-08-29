@@ -22,6 +22,9 @@ class Country{
          // let hideTheHighScoreStuff = document.querySelector('#high-score-button')
     //hideTheHighScoreStuff.setAttribute("hidden", false)
           questionAdapter.fetchQuestions(this.id)
+          const countryId = document.getElementById('country-id')
+          countryId.setAttribute('data-id', this.id)
+          // represents country Id: countryId.dataset.id
           //appendThis(e.target.id.questions())
           
         //ask about this part

@@ -18,13 +18,13 @@ class HighscoresAdapter{
             })
         })   
         .then(resp => resp.json())
-        .then(json => renderHighScores(json))
+        .then(json => renderHighScores(json.highscore))
       }
 }
 
 function renderHighScores(highscores){
-   
-    
+  //debugger
+    console.log(highscores)
     highscores.forEach(highscoresObject => {
         
         let highscore = new Highscore(highscoresObject.name, highscoresObject.score, highscoresObject.country_id)

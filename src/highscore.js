@@ -9,58 +9,22 @@ class Highscore{
          Highscore.arrayOfHighscores.push(this)
       }
 
-      
-
-      whenTheyClickAHighscoreButton = (e) => {
-         if (e.target.textContent == "submit"){
-            let questionsAnswers = document.querySelector('main')
-            questionsAnswers.setAttribute("hidden", true)
-
-            this.addHighscoretoDOM()
-
-            const backToStartButton = document.createElement('button')
-            backToStartButton.textContent = "Start over"
-            const areaForStartButton = document.getElementById('back-to-start')
-            areaForStartButton.appendChild(backToStartButton)
-            backToStartButton.addEventListener('click', this.backtoStart)
-         }
-      }
-
-      backtoStart = (e) => {
-         if (e.target.textContent == "Start over"){
-         //show everything that was there in the beginning
-         let stuff = document.querySelector('#stuff')
-          stuff.setAttribute("hidden", false)
-         }
-      }
-
-
      addHighscoretoDOM(){
         
         const highscore = document.createElement('li')
         const newHighscoreArea = document.getElementById('all-high-scores')
-        highscore.textContent == this.score
-        highscore.textContent == this.name
+        highscore.textContent += `Your score: ${this.score}`
+        highscore.textContent += ` Name: ${this.name} `
+        const br = document.createElement("BR")
+        //highscore.textContent += this.country_id 
+        highscore.setAttribute('data-id', this.country_id)
+        //thisId.setAttribute("hidden", true)
+        //find the country object, display country.name
         newHighscoreArea.appendChild(highscore)
+        //this.whenTheyClickAHighscoreButton()
         
      }
-   //     )}
-}
-     
-   //   highscoreButton.addEventListener('click', function(){
-   //       highscoreAdapter.fetchHighscores()
-   //   })
-
-      
-      
-   //      const highscoreAdapter = new HighscoresAdapter()
-       
-   //     highscoreAdapter.fetchHighscores()
-   //     console.log(fetchHighscores())
-   // }
+   
 
         
-// }
-
-        
-
+   }
