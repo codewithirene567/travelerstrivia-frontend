@@ -89,8 +89,18 @@ input#submit:hover {
     color: black;
   }
 
+  div#back-to-start button {
+    background-color: yellow;
+    border: 2px solid black;
+    color: black;
+    padding: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
 
-
-
-
- 
+  div#back-to-start button:hover {
+    background-color: white;
+    color: black;
+  }
