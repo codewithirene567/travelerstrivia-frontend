@@ -3,17 +3,22 @@
 }
 div#stuff {
     color: yellow;
-    text-shadow: 2px 2px 20px goldenrod;
+    text-shadow: 2px 2px 20px black;
     text-align: center;
     font-size: 40px;
   }
  
 p#intro {
-    font-size: 20px; 
+    font-size: 20px;
+    background-color: rgba(0, 0, 90, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    
 }
 
 p#directions {
     font-size: 20px; 
+    background-color: rgba(0, 0, 90, 0.3);
 }
 
   * {
