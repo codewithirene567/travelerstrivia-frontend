@@ -1,7 +1,7 @@
 # Traveler's Trivia-frontend
 
 ## Short description:
-Traveler's Trivia - Traveler's Trivia is exactly what it sounds like: a place for travelers to try their hand at some trivia for all the countries they could visit
+Traveler's Trivia - Traveler's Trivia is exactly what it sounds like: a place for travelers to try their hand at some trivia for all the countries they could visit.
 Note: This application does need a backend to be running from another Github repo which is found here: https://github.com/codewithirene567/travelerstrivia-backend
 
 ## Install instructions:
