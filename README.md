@@ -1,10 +1,10 @@
 # Traveler's Trivia-frontend
 
-##Short description:
+## Short description:
 Traveler's Trivia - Traveler's Trivia is exactly what it sounds like: a place for travelers to try their hand at some trivia for all the countries they could visit
 Note: This application does need a backend to be running from another Github repo which is found here: https://github.com/codewithirene567/travelerstrivia-backend
 
-##Install instructions:
+## Install instructions:
 1) In your terminal, just copy and paste the following: git clone git@github.com:codewithirene567/travelerstrivia-frontend.git.
 2) Then type cd travelerstrivia-frontend.
 3) Type in a command to open the front end file up
@@ -23,8 +23,8 @@ Note: This application does need a backend to be running from another Github rep
 
 6) Then run open index.html to get the front end of the application to show on the browser.
 
-##A contributor's guide:
+## A contributor's guide:
 Any pull requests can be done at https://github.com/codewithirene567/travelerstrivia-frontend
 
-##License:
+## License:
 This program is available for reuse as open source under the terms in the MIT License found here https://opensource.org/licenses/MIT.
