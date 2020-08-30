@@ -7,8 +7,7 @@ Note: This application does need a backend to be running from another Github rep
 ## Install instructions:
 1) In your terminal, just copy and paste the following: git clone git@github.com:codewithirene567/travelerstrivia-frontend.git.
 2) Then type cd travelerstrivia-frontend.
-3) Type in a command to open the front end file up
-  3a) If you use Visual Studio Code for your Local Environment type in code .
+3) Type in a command to open the front end file up. Note: If you use Visual Studio Code for your Local Environment type in code .
 4) Next run bundle install in the terminal.
 
 5) You'll need to get the backend for this project running as well so that the front-end can make fetch requests.
