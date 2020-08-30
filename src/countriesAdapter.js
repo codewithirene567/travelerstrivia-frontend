@@ -18,7 +18,7 @@ function renderCountries(countries){
         let country = new Country(countryObject.name, countryObject.id)
         country.addCountrytoDOM()
         
-        })
+    })
 }
 
 

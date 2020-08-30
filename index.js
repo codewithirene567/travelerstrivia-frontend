@@ -12,12 +12,8 @@ document.getElementById('submit').addEventListener('click', function(event){
       
        highscoreAdapter.fetchHighscores(name, score, country_id)
     })
- //   newHighscoreButton.addEventListener('click', this.whenTheyClickAHighscoreButton)
- //}
 
 document.addEventListener('DOMContentLoaded', ()=> {
-    //alert("hi")
-    
     () => specialForm.classList.toggle('d-none')
     document.getElementById('high-score-button').setAttribute('hidden', true)
 })
@@ -39,12 +35,10 @@ function whenTheyClickAHighscoreButton() {
 
  function backtoStart (e) {
     if (e.target.textContent === "Start over"){
-       //debugger
-    //show everything that was there in the beginning
+
     let stuff = document.getElementById('stuff')
-     //stuff.setAttribute("hidden", false)
      stuff.hidden = false
-     //new stuff
+
      let scoreBoard = document.getElementById('all-high-scores')
      scoreBoard.hidden = true
      let startOverButton = document.getElementById('back-to-start')
@@ -53,22 +47,15 @@ function whenTheyClickAHighscoreButton() {
  }
 
 function endGame() {
-    //the game ends here
     () => specialButton.classList.toggle('d-none')
 }
-
 
 const countryAdapter = new CountriesAdapter()
 document.addEventListener('DOMContentLoaded', function() {
     countryAdapter.fetchCountries()
   })
-   
-
 
 specialButton.addEventListener( 'click', ()=>{
     specialForm.classList.toggle('d-none')
 
 })
-
-
-

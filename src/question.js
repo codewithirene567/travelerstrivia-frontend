@@ -74,14 +74,6 @@ class Question{
              }
          }
 
-        //  nowUnhideIt(){
-        //     if (numberOfQuestionsAnswered === 3){
-        //         let submitButton = document.getElementById('high-score-button')
-        //         //submitButton.setAttribute("hidden", false)
-        //         submitButton.hidden = false
-        //      }
-        //  }
-
         calculateScore(){
           this.selectSubmitToEnd()
           let finalScore = document.getElementById('display-score')
@@ -102,5 +94,4 @@ class Question{
              }
          }
         
-
   }

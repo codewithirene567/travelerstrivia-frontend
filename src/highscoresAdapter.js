@@ -23,13 +23,12 @@ class HighscoresAdapter{
 }
 
 function renderHighScores(highscores){
-  //debugger
-    console.log(highscores)
+
     highscores.forEach(highscoresObject => {
         
         let highscore = new Highscore(highscoresObject.name, highscoresObject.score, highscoresObject.country_id)
 
         highscore.addHighscoretoDOM()
         
-        })
+    })
 }
