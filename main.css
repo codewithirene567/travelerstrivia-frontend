@@ -117,3 +117,7 @@ input#submit:hover {
     background-color: white;
     color: black;
   }
+
+  ul#sorted-high-scores{
+    color: yellow;
+  }

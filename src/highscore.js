@@ -1,6 +1,7 @@
 const newHighscoreButton = document.getElementById('submit')
 class Highscore{
     static arrayOfHighscores =[]
+  
     constructor(name, score, country_id) {
         this.name = name;
         this.score = score;
@@ -24,7 +25,10 @@ class Highscore{
         }
         highscore.setAttribute('data-id', this.country_id)
 
-        newHighscoreArea.appendChild(highscore)  
+        newHighscoreArea.appendChild(highscore) 
+
      }
+    
+     
       
 }

@@ -36,11 +36,17 @@ class Question{
         answerButton1.addEventListener('click', this.whenTheyClickAnAnswer)
         answerButton2.addEventListener('click', this.whenTheyClickAnAnswer)
         answerButton3.addEventListener('click', this.whenTheyClickAnAnswer)
+       
         
     }
 
     whenTheyClickAnAnswer = (e) =>{
-        
+    //reason why it has to be written in arrow function
+    //when regular function, the keyword this gets its value when function is executed
+    //it is not executed until click happens
+    //this now becomes the button you click
+    //arrow functions allow this to be defined when the arrow function is defined
+   
         if (e.target.innerText === this.right){
             alert("You got it right!")
             document.getElementById('Q' + this.id + "B1").disabled = true
@@ -76,8 +82,10 @@ class Question{
 
         calculateScore(){
           this.selectSubmitToEnd()
+          
           let finalScore = document.getElementById('display-score')
           finalScore.textContent = `Congrats! Your score is ${score}`
+         
            
         }
 
@@ -91,6 +99,10 @@ class Question{
             if (e.target.innerText === "Click here to submit your score to the high scores list"){
                 let submitButton = document.getElementById('high-score-button')
                 submitButton.setAttribute("hidden", true)
+                let highscoreForm = document.getElementById('high-score-form-container')
+    highscoreForm.removeAttribute("hidden")
+    highscoreForm.className = ""
+    
              }
          }
         

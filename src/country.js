@@ -4,6 +4,7 @@ class Country{
         this.name = name;
         this.id = id;
          Country.allArray.push(this)
+
       }
 
      addCountrytoDOM(){
@@ -20,12 +21,18 @@ class Country{
      }
 
      whenTheyClickACountry = (e) => {
+        
         const questionAdapter = new QuestionsAdapter()
+       
         let stuff = document.querySelector('#stuff')
         stuff.setAttribute("hidden", true)
+        //the questions are fetched here based on the country id that is passed in
         questionAdapter.fetchQuestions(this.id)
+        console.log(questionAdapter) 
         const countryId = document.getElementById('country-id')
         countryId.setAttribute('data-id', this.id)
+         numberOfQuestionsAnswered = 0
+         score = 0
      }
 
 }

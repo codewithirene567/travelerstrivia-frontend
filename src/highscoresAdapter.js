@@ -15,7 +15,9 @@ class HighscoresAdapter{
                 name: name,
                 score: score,
                 country_id: country_id
+                
             })
+            
         })   
         .then(resp => resp.json())
         .then(json => renderHighScores(json.highscore))
@@ -23,7 +25,8 @@ class HighscoresAdapter{
 }
 
 function renderHighScores(highscores){
-
+    let highscoreList = document.getElementById('all-high-scores')
+    highscoreList.removeAttribute('hidden')
     highscores.forEach(highscoresObject => {
         
         let highscore = new Highscore(highscoresObject.name, highscoresObject.score, highscoresObject.country_id)
