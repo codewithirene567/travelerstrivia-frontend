@@ -88,12 +88,6 @@ document.getElementById('sort-button').addEventListener('click', function(event)
     function appendSortScores(){
       
         const sortedHighscoresarea = document.getElementById('sorted-high-scores') //this already exists in the html
-        
-        let score = highscoresCopy[0]["score"]
-      
-        let name = highscoresCopy[0]["name"]
-        let country_id = highscoresCopy[0]["country_id"]
-
        
         highscoresCopy.forEach( highscore => { //for each high score in the high score copy array execute the following function
             const sortedHighscore = document.createElement('li') // create a variable called sortedHighscore which is an li element

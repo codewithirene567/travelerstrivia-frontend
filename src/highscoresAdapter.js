@@ -1,7 +1,7 @@
 //fetch request to get high scores
 class HighscoresAdapter{
     constructor(){
-        this.baseUrl = "http://127.0.0.1:3000/highscores"
+        this.baseUrl = "https://floating-citadel-25347.herokuapp.com/highscores"
     }
 
     fetchHighscores(name, score, country_id){

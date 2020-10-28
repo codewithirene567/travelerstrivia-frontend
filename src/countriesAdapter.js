@@ -1,7 +1,7 @@
 //fetch request to get all countries in the beginning
 class CountriesAdapter{
     constructor(){
-        this.baseUrl = "http://127.0.0.1:3000/countries"
+        this.baseUrl = "https://floating-citadel-25347.herokuapp.com/countries"
     }
 
     fetchCountries(){

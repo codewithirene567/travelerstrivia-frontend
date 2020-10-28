@@ -1,6 +1,6 @@
 class QuestionsAdapter{
     constructor(){
-        this.baseUrl = "http://127.0.0.1:3000/questions"
+        this.baseUrl = "https://floating-citadel-25347.herokuapp.com/questions"
     }
 
     fetchQuestions(id){
